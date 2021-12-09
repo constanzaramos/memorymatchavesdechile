@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Memory match</h1>
+        <h2>Aves de Chile</h2>
+      </header>
+      <section class="score-panel">
+        <h3>Puntaje</h3>
+        <ul id="star-rating" class="star-rating">
+          <li class="star"><i class="fa fa-star"></i></li>
+          <li class="star"><i class="fa fa-star"></i></li>
+          <li class="star"><i class="fa fa-star"></i></li>
+        </ul>
+        <span class="moves-counter">0</span>Movimientos
+        <div class="timer-container">
+          <span class="timer"><i class="fa fa-hourglass-start"></i>Timer:00:00
+          </span>
+        </div>
+        <div class="reset">
+          <button class="btn reset-btn">Reset<i class="fa fa-repeat"></i></button>
+        </div>
+      </section>
+      <!--Modal-->
+      <section class="win-game-modal">
+        <div id="modal">
+          <!--modal content-->
+          <span class="close">&times;</span>
+          <h2>Ganaste!</h2>
+          <p>Encontraste los 8 pares de cartas del juego</p>
+          <button class="btn play-again-btn">Jugar nuevamente</button>
+          <img src="img/chiki.jpg" alt="">
+          
+        </div>
+
+      </section>
+      <ul class="deck"></ul>
+    </div>
+
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
