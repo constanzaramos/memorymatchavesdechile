@@ -161,6 +161,7 @@ p.stats:last-child{
     margin-bottom: 6em;
     padding: 0.5em;
     width: 35em;
+    border-radius: 20px;
 }
 
 .deck,
@@ -184,3 +185,106 @@ img{
     visibility: hidden;
 }
 
+.deck .card.flip{
+    background: #fff;
+    cursor: default;
+    transform: rotateY(180deg);
+    transition: transform 0.3 linear;
+    pointer-events: none;
+}
+
+.flip img{
+    background: #fff;
+    visibility: visible;
+}
+
+.deck .card.match{
+    background: #39d;
+    visibility: visible;
+    cursor: default;
+    animation: pulse 1s;
+}
+
+.match img{ 
+    background: #39d;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width:550px) {
+    .deck{
+        height: 50em;
+        padding: 2em;
+        width: 50em;
+    }
+    .card{
+        height: 10em;
+        width: 10em;
+    }
+
+    .deck-img{
+        width: 9em;
+    }
+
+    .modal-content h2{
+        font-size: 4em;
+    }
+
+    .play-again-btn{
+        font-size: 1.8em;
+    }   
+}
+
+@media screen and(min-width:800px){
+    h1{
+        font-size: 6em;
+    }
+
+    p{
+        font-size: 2.3em;
+    }
+
+    .deck{
+        height: 70em;
+        width: 70em;
+    }
+
+    .card{
+        height: 15em;
+        width: 15em;
+    }
+
+    .deck-img{
+        width: 13em;
+    }
+
+    .reset-btn{
+        font-size: 0.8em;
+    }
+
+    .footer{
+        font-size: 1.2em;
+    }
+
+    .modal-content h2{
+        font-size: 5em;
+    }
+
+    .modal-img{
+        width: 30em;
+    }
+
+    .play-again-btn{
+        font-size: 2em;
+    }
+}
